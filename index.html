@@ -430,6 +430,23 @@
 		(function () {
 			'use strict'
 
+			var Util = (function () {
+				var prefix = 'html5_reader_' + novelId + '_';
+				//读取
+				var StorageGetter = function (key) {
+					return localStorage.getItem(prefix + key);
+				}
+				//存储
+				var StorageSetter = function (key, val) {
+					return localStorage.setItem(prefix + key, val);
+				}
+
+				return {
+					StorageGetter: StorageGetter,
+					StorageSetter: StorageSetter
+				}
+			})();
+
 			var Dom = {
 				top_nav: $('#topid'),
 				bottom_nav: $('#bottomid'),
@@ -475,23 +492,6 @@
 				Dom.body.html('链接有误，请确认链接是否正确后重新打开链接');
 				return;
 			}
-
-			var Util = (function () {
-				var prefix = 'html5_reader_' + novelId + '_';
-				//读取
-				var StorageGetter = function (key) {
-					return localStorage.getItem(prefix + key);
-				}
-				//存储
-				var StorageSetter = function (key, val) {
-					return localStorage.setItem(prefix + key, val);
-				}
-
-				return {
-					StorageGetter: StorageGetter,
-					StorageSetter: StorageSetter
-				}
-			})();
 
 
 			if (!initFontSize) {
