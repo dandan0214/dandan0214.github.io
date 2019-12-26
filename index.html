@@ -430,6 +430,33 @@
 		(function () {
 			'use strict'
 
+			var Dom = {
+				top_nav: $('#topid'),
+				bottom_nav: $('#bottomid'),
+				menu_div: $('#menu-div'),
+				menu_div_hidden: $('#menu-div-hidden'),
+				font_container: $('.fc'),
+				font_button: $('#typeface_button'),
+				menu_button: $("#catalog_button"),
+				ift: $('#ift'),
+				night_icon: $('#night_icon'),
+				day_icon: $('#day_icon'),
+				body: $('body')
+			};
+
+			var Win = $(window);
+			var Doc = $(document);
+			var readerModel;
+			var readerUI;
+			var RootContainer = $('#ctid');
+			var DayorNight = Util.StorageGetter('day_night');
+			DayorNight = parseInt(DayorNight);
+			var initFontSize = Util.StorageGetter('font_size');
+			initFontSize = parseInt(initFontSize);
+			var bkd = Util.StorageGetter('bkd');
+			var scroll = 0;
+			var screenHeight = window.screen.height;
+
 			function getQueryVariable(variable) {
 				var query = window.location.search.substring(1);
 				var vars = query.split("&");
@@ -466,34 +493,7 @@
 				}
 			})();
 
-			var Dom = {
-				top_nav: $('#topid'),
-				bottom_nav: $('#bottomid'),
-				menu_div: $('#menu-div'),
-				menu_div_hidden: $('#menu-div-hidden'),
-				font_container: $('.fc'),
-				font_button: $('#typeface_button'),
-				menu_button: $("#catalog_button"),
-				ift: $('#ift'),
-				night_icon: $('#night_icon'),
-				day_icon: $('#day_icon'),
-				body: $('body')
-			};
 
-
-
-			var Win = $(window);
-			var Doc = $(document);
-			var readerModel;
-			var readerUI;
-			var RootContainer = $('#ctid');
-			var DayorNight = Util.StorageGetter('day_night');
-			DayorNight = parseInt(DayorNight);
-			var initFontSize = Util.StorageGetter('font_size');
-			initFontSize = parseInt(initFontSize);
-			var bkd = Util.StorageGetter('bkd');
-			var scroll = 0;
-			var screenHeight = window.screen.height;
 			if (!initFontSize) {
 				initFontSize = 20;
 			}
