@@ -1,0 +1,42 @@
+/* CSS Document */
+
+html, body, ul, li, h1, h2, h3, h4, h5, h6, fieldset, legend {padding:0; margin:0; font-size:14px; color:#333;font-family:Helvetica,Microsoft Yahei,Œ¢»Ì—≈∫⁄,Simsun,ÀŒÃÂ,Arial}
+body{position:absolute;  
+width:100%; 
+background-image:url("bg.jpg"); 
+background-position: center 0; 
+background-repeat: no-repeat; 
+background-attachment: fixed;
+background-size: cover; 
+-webkit-background-size: cover;/* ºÊ»›Webkitƒ⁄∫À‰Ø¿¿∆˜»ÁChrome∫ÕSafari */ 
+-o-background-size: cover;/* ºÊ»›Opera */ 
+zoom: 1;}
+a{font-size:14px; color:#333; text-decoration:none}
+a:hover{color:#005BAC; text-decoration:none}
+img{border:none}
+.w1200{width:80%; margin:auto;}
+.fl{float:left;}
+.fr{float:right;}
+.clear{clear:both;}
+.h50{ height:50px;}
+ul,li{list-style:none}
+
+.enqh{margin-top:50px;}
+.enq a{ display:block; width:20px;border-radius: 4px 0 0 4px;user-select: none; height:20px;color: #fff;background: #ff005e; float:left;padding: 4px 10px;}
+.cnq a{ display:block; width:20px;border-radius: 0 4px 4px 0;color: #ff005e; height:20px;background: #fff;user-select: none;padding: 4px 10px;color: #ff005e; float:left;}
+.dnq a{ display:block; user-select: none; text-align:center; font-size:18px; ;color: #fff; float:right;padding: 5px; width:70px; border:2px solid #ffffff;}
+.w90{ width:90%;}
+.w90 ul { margin-top:50px;}
+.w90 ul li a{ text-align:center; color:#FFFFFF; width:100%; display:block; font-size:24px; line-height:50px;}
+.w90 p{ color:#FF005E; font-size:28px;}
+.w10{ width:10%;}
+.w10 ul{ width:45px; float:right; margin-top:250px;}
+.w10 img{ float:left; margin-bottom:20px;}
+
+.cont{ margin-top:50px; color:#FFFFFF; font-size:20px; line-height:30px; width:98%; margin:auto;}
+.cont p{ padding-top:10px; padding-bottom:10px;}
+.ys{ color:#FF005E;}
+
+@media(min-width:1000px){
+body{ font-size:1.4rem;}
+}
